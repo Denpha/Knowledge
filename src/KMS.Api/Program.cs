@@ -74,8 +74,10 @@ builder.Services.AddCors(options =>
         var origins = configuredOrigins
             .Concat(new[] {
                 "http://localhost:5173", "http://localhost:5174",
+                "http://127.0.0.1:5173", "http://127.0.0.1:5174",
                 "http://172.28.26.249:5173", "http://172.28.26.249:5174",
-                "http://172.29.65.45:5173", "http://172.29.65.45:5174"
+                "http://172.29.65.45:5173", "http://172.29.65.45:5174",
+                "http://192.168.1.176:5173", "http://192.168.1.176:5174"
             })
             .Where(o => !string.IsNullOrWhiteSpace(o))
             .Distinct(StringComparer.OrdinalIgnoreCase)

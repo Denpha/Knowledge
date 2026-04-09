@@ -120,7 +120,7 @@ function AdminDashboardPage() {
             <PieChart>
               <Pie data={d?.categoryBreakdown ?? []} dataKey="count" nameKey="name"
                 cx="50%" cy="50%" outerRadius={85}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                 labelLine={false}>
                 {(d?.categoryBreakdown ?? []).map((_, i) => (
                   <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />

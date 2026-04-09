@@ -66,7 +66,7 @@ function AdminStoragePage() {
 
   const presignMutation = useMutation({
     mutationFn: (key: string) => api.getPresignedUrl(key, 60),
-    onSuccess: (res, key) => {
+    onSuccess: (res, _key) => {
       if (res.data) {
         setPreviewUrl(res.data)
       }

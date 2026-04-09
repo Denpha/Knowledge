@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from '@tanstack/react-router'
-import Slider from 'react-slick'
+import SliderLib from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Icon } from '@iconify/react'
 import { useIsAuthenticated, useCurrentUser, useLogout } from '../hooks/useAuth'
+
+// react-slick ships CJS — unwrap .default when Vite resolves the module as an object
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Slider = ((SliderLib as any).default ?? SliderLib) as typeof SliderLib
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -211,7 +215,7 @@ function Hero() {
   const [selectedCat, setSelectedCat] = useState('Web Development')
 
   return (
-    <section id="Home" className="bg-banner-image pt-28 pb-20">
+    <section id="Home" className="bg-banner-image bg-cover bg-center pt-28 pb-20">
       <div className="relative px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col gap-4 text-center">
@@ -362,7 +366,7 @@ function Articles() {
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-normal text-gray-500">{item.category}</p>
-                    <span className="text-sm font-semibold text-success border-2 border-success rounded-md px-2 py-0.5">{item.price}</span>
+                    <span className="text-sm font-semibold text-success-land border-2 border-success-land rounded-md px-2 py-0.5">{item.price}</span>
                   </div>
                   <Link to="/articles">
                     <p className="text-base font-semibold group-hover:text-primary transition-colors cursor-pointer">{item.profession}</p>
@@ -479,7 +483,7 @@ function Newsletter() {
   return (
     <section id="join-section" className="-mb-64 py-14">
       <div className="relative z-10">
-        <div className="mx-auto max-w-7xl py-16 md:py-24 px-8 lg:px-24 bg-orange rounded-lg" style={{ backgroundImage: "url('/images/newsletter/hands.svg')", backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom' }}>
+        <div className="mx-auto max-w-7xl py-16 md:py-24 px-8 lg:px-24 bg-si-orange rounded-lg" style={{ backgroundImage: "url('/images/newsletter/hands.svg')", backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'right bottom' }}>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <h3 className="text-4xl font-bold mb-3">รับข่าวสารจาก KMS</h3>
@@ -626,7 +630,7 @@ function Footer() {
 export default function LandingPage() {
   const scrollRef = useRef<HTMLDivElement>(null)
   return (
-    <div ref={scrollRef} className="font-sans">
+    <div ref={scrollRef} className="landing-page font-inter">
       <Header />
       <main>
         <Hero />
