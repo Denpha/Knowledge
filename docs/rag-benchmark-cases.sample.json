@@ -1,0 +1,18 @@
+{
+  "promptProfile": "balanced",
+  "topK": 5,
+  "maxContextChars": 5000,
+  "semanticThreshold": 0.65,
+  "cases": [
+    {
+      "caseId": "finance-001",
+      "question": "ขั้นตอนเบิกค่าใช้จ่ายงานวิจัยต้องแนบเอกสารอะไรบ้าง",
+      "expectedKeywords": ["ใบสำคัญ", "อนุมัติ", "เอกสารแนบ"]
+    },
+    {
+      "caseId": "hr-001",
+      "question": "การลาพักร้อนประจำปีต้องยื่นล่วงหน้ากี่วัน",
+      "expectedKeywords": ["ลาพักร้อน", "ล่วงหน้า", "อนุมัติ"]
+    }
+  ]
+}

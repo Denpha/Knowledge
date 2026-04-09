@@ -1,0 +1,29 @@
+# Secrets — never commit
+.env
+*.env
+appsettings.Production.json
+appsettings.Staging.json
+Api-key.txt
+copilot.txt
+
+# Build output
+**/bin/
+**/obj/
+publish/
+
+# Node
+node_modules/
+skckms-web/dist/
+kms-web/dist/
+free-react-tailwind-admin-dashboard/node_modules/
+
+# Uploads
+src/SkcKMS.Api/uploads/
+
+# IDE
+.vscode/
+.idea/
+*.user
+
+# dotnet tools
+.dotnet/

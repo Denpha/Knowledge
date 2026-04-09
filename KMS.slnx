@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/KMS.Api/KMS.Api.csproj" />
+    <Project Path="src/KMS.Application/KMS.Application.csproj" />
+    <Project Path="src/KMS.Domain/KMS.Domain.csproj" />
+    <Project Path="src/KMS.Infrastructure/KMS.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/KMS.Api.Tests/KMS.Api.Tests.csproj" />
+    <Project Path="tests/KMS.Domain.Tests/KMS.Domain.Tests.csproj" />
+  </Folder>
+</Solution>
