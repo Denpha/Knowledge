@@ -42,6 +42,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 builder.Host.UseSerilog();
+builder.Host.UseSystemd();
 
 // Add services to the container.
 builder.Services.AddControllers();

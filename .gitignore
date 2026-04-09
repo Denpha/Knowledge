@@ -27,3 +27,4 @@ src/SkcKMS.Api/uploads/
 
 # dotnet tools
 .dotnet/
+src/KMS.Api/logs/
