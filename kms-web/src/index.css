@@ -6,8 +6,8 @@ layer(base);
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-outfit: Outfit, sans-serif;
-  --font-inter: Inter, sans-serif;
+  --font-outfit: 'Kanit', sans-serif;
+  --font-inter: 'Kanit', sans-serif;
 
   --breakpoint-*: initial;
   --breakpoint-sm: 576px;
@@ -143,6 +143,7 @@ layer(base);
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
     @apply relative font-normal font-outfit z-1 bg-gray-50;
+    font-family: 'Kanit', sans-serif;
   }
 }
 

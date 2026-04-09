@@ -630,7 +630,7 @@ function Footer() {
 export default function LandingPage() {
   const scrollRef = useRef<HTMLDivElement>(null)
   return (
-    <div ref={scrollRef} className="landing-page font-inter">
+    <div ref={scrollRef} className="landing-page" style={{ fontFamily: "'Kanit', sans-serif" }}>
       <Header />
       <main>
         <Hero />
