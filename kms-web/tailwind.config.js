@@ -12,19 +12,19 @@ export default {
         body: ['DM Sans', 'sans-serif'],
       },
       colors: {
-        primary: {
-          50:  '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-        },
-        accent: '#e85d1e',
+        primary: '#1a6b3a',
+        cream: '#f5faf7',
+        success: '#6b9f36',
+        orange: '#f9cd92',
+        midnight_text: '#1a1a2e',
+        emailbg: 'rgba(255,255,255,0.15)',
+      },
+      backgroundImage: {
+        'banner-image': "url('/images/banner/background.png')",
+        'newsletter': "url('/images/newsletter/hands.svg')",
+      },
+      boxShadow: {
+        'mentor-shadow': '0px 4px 20px rgba(110, 127, 185, 0.1)',
       },
       animation: {
         float: 'float 4s ease-in-out infinite',
